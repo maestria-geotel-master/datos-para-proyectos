@@ -33,43 +33,106 @@ La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.
     ```
    
    * Viviendas:
-   
-      * Características generales de las viviendas:
       
-          * Tipo de vivienda:
-   
-          ```{r}
-          cat(grep('Tipo de vivienda:', colnames(vivpersgeom_sf), value=T), sep = '\n')
-          ```
+      * Tipo de vivienda:
+  
+      ```{r}
+      cat(grep('Tipo de vivienda:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+  
+      * Condición de ocupación:
+      
+      ```{r}
+      cat(grep('Condición de ocupación:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Material Construcción:
+      
+      ```{r}
+      cat(grep('Material Construcción', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Tiene la vivienda cuarto de cocina:
+      
+      ```{r}
+      cat(grep('Tiene la vivienda cuarto de coc', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Cantidad Cuartos tiene la vivienda:
+      
+      ```{r}
+      cat(grep('Cantidad Cuartos tiene la viv:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Cantidad Hogares en la vivienda:
+      
+      ```{r}
+      cat(grep('Cantidad Hogares en la vivienda:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Acceso a las viviendas del segmento:
+      
+      ```{r}
+      cat(grep('Acceso a las viviendas del seg', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Estado de la mayoría de vías de acceso a viviendas del segmento:
+      
+      ```{r}
+      cat(grep('Estado de la mayoría de vías', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+  
+      * Estado de la mayoría de vías de acceso a viviendas del segmento:
+      
+      ```{r}
+      cat(grep('Principal medio de transporte', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+  
+      * Medio de transporte llega al segmento:
+      
+      ```{r}
+      cat(grep('Medio de transporte llega al seg', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
 
-          * Condición de ocupación:
-          
-          ```{r}
-          cat(grep('Condición de ocupación:', colnames(vivpersgeom_sf), value=T), sep = '\n')
-          ```
-          
-          * Material Construcción:
-          
-          ```{r}
-          cat(grep('Material Construcción', colnames(vivpersgeom_sf), value=T), sep = '\n')
-          ```
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+      * Hogares del segmento expuestos a:
+      
+      ```{r}
+      cat(grep('Hogares del segmento expuestos a:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Contaminación:
+      
+      ```{r}
+      cat(grep('Contaminación:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Ubicación viviendas del segmento:
+      
+      ```{r}
+      cat(grep('Ubicación viviendas del segmento:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+      * Desastres que afectaron a hogares del segmento:
+      
+      ```{r}
+      cat(grep('Desastres que afectaron a hogares', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
+      
+      * Centros de refugio de la defensa civil en este segmento:
+      
+      ```{r}
+      cat(grep('Centros de refugio de la defensa civ', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
    * Personas: 
    
    * Geomorfología: 

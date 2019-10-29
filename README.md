@@ -68,6 +68,35 @@ continuación:
             ## Condición de ocupación: Ocupada con personas presentes
             ## Condición de ocupación: Desocupada
             ```
+            
+              - Material
+            Construcción:
+            
+            <!-- end list -->
+            
+            ``` r
+            cat(grep('Material Construcción', colnames(vivpersgeom_sf), value=T), sep = '\n')
+            ## Material Construcción Paredes Exteriores: Block o concreto
+            ## Material Construcción Paredes Exteriores: Madera
+            ## Material Construcción Paredes Exteriores: Tabla de palma
+            ## Material Construcción Paredes Exteriores: Tejamanil
+            ## Material Construcción Paredes Exteriores: Yagua
+            ## Material Construcción Paredes Exteriores: Otro
+            ## Material Construcción Techo: Concreto
+            ## Material Construcción Techo: Zinc
+            ## Material Construcción Techo: Asbesto cemento
+            ## Material Construcción Techo: Cana
+            ## Material Construcción Techo: Yagua
+            ## Material Construcción Techo: Otro
+            ## Material Construcción Piso: Mosaico
+            ## Material Construcción Piso: Cemento
+            ## Material Construcción Piso: Granito
+            ## Material Construcción Piso: Mármol
+            ## Material Construcción Piso: Cerámica
+            ## Material Construcción Piso: Madera
+            ## Material Construcción Piso: Tierra
+            ## Material Construcción Piso: Otro
+            ```
     
       - Personas:
     

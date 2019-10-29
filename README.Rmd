@@ -42,11 +42,30 @@ La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.
           cat(grep('Tipo de vivienda:', colnames(vivpersgeom_sf), value=T), sep = '\n')
           ```
 
-          *  Condición de ocupación:
+          * Condición de ocupación:
           
           ```{r}
           cat(grep('Condición de ocupación:', colnames(vivpersgeom_sf), value=T), sep = '\n')
           ```
+          
+          * Material Construcción:
+          
+          ```{r}
+          cat(grep('Material Construcción', colnames(vivpersgeom_sf), value=T), sep = '\n')
+          ```
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
           
           

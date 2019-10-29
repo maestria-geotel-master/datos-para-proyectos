@@ -8,7 +8,7 @@ distintos (`.csv`, `.gpkg` y `.RDS` de R). Cada conjunto es descrito a
 continuación:
 
   - `data/vivpersgeom_sf.*`. Un total de 850 variables, sobre viviendas,
-    personas y geomorfología a nivel municipal. La mayoría de las
+    personas y geomorfometría a nivel municipal. La mayoría de las
     variables se encuentran bajo columnas con encabezados explícitos.
     Agrupadas, las variables son los
     siguientes:
@@ -389,9 +389,573 @@ continuación:
         ## Centros de refugio de la defensa civil en este segmento: Otros: No
         ## Centros de refugio de la defensa civil en este segmento: Otros: No declarado
         ```
+        
+          - Distancia kms de viviendas del segmento hasta: Hospital más
+            cercano:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Distancia kms.*Hospital más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 0
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 1
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 2
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 3
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 4
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 5
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 6
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 7
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 8
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 9
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 10
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 11
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 12
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 13
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 14
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 15
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 16
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 17
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 18
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 19
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 20
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 21
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 22
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 23
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 24
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 25
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 26
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 27
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 28
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 29
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 30
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 31
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 32
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 33
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 34
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 35
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 36
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 37
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 38
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 39
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 40
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 41
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 42
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 43
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 44
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 45
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 46
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 47
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 48
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 50
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 52
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 53
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 54
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 55
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 56
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 57
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 58
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 60
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 65
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 66
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 72
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 78
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 80
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: 99
+        ## Distancia kms de viviendas del segmento hasta: Hospital más cercano: No declarada
+        ```
+        
+          - Distancia kms de viviendas del segmento hasta: Clinica o
+            dispensario más
+        cercano:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Distancia kms.*sario más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 0
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 1
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 2
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 3
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 4
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 5
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 6
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 7
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 8
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 9
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 10
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 11
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 12
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 13
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 14
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 15
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 16
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 17
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 18
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 19
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 20
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 21
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 22
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 23
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 24
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 25
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 26
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 27
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 28
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 29
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 30
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 31
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 32
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 33
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 34
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 35
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 36
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 37
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 39
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 40
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 42
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 44
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 48
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 50
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 60
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: 68
+        ## Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano: No declarada
+        ```
+        
+          - Distancia kms de viviendas del segmento hasta: Liceo
+            secundario más
+        cercano:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Distancia kms.*dario más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 0
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 1
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 2
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 3
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 4
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 5
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 6
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 7
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 8
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 9
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 10
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 11
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 12
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 13
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 14
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 15
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 16
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 17
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 18
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 19
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 20
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 21
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 22
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 23
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 24
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 25
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 26
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 27
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 28
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 29
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 30
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 31
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 32
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 33
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 34
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 35
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 36
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 38
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 40
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 41
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 42
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 45
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 50
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 58
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 60
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 66
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 68
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: 70
+        ## Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano: No declarada
+        ```
+        
+          - Distancia kms de viviendas del segmento hasta: Farmacia más
+            cercana:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Distancia kms.*Farmacia más cercana:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 0
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 1
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 2
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 3
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 4
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 5
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 6
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 7
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 8
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 9
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 10
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 11
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 12
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 13
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 14
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 15
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 16
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 17
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 18
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 19
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 20
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 21
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 22
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 23
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 24
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 25
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 26
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 27
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 28
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 29
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 30
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 31
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 32
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 33
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 34
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 35
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 36
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 37
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 38
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 39
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 40
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 41
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 42
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 43
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 45
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 50
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 55
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 56
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 57
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 60
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 68
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 70
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 80
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 81
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: 99
+        ## Distancia kms de viviendas del segmento hasta: Farmacia más cercana: No declarada
+        ```
+        
+          - Distancia kms de viviendas del segmento hasta: Colmado o
+            supermercado más
+        cercano:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Distancia kms.*mercado más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 0
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 1
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 2
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 3
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 4
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 5
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 6
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 7
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 8
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 9
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 10
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 11
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 12
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 13
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 14
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 15
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 16
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 17
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 18
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 19
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 20
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 22
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 23
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 24
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 25
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 28
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 29
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 30
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 32
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 35
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 40
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 50
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 52
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 53
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 54
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 56
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 57
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: 60
+        ## Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano: No declarada
+        ```
     
       - Personas:
+        
+          - Cuál es la relación o parentesco con la jefa o el jefe del
+            hogar:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Cuál es la relación o parentesco', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Jefa o jefe
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Esposo (a) o compañero (a)
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Hijo (a)
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Hijo (a) de crianza
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Padre o madre
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Nieto (a)
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Suegro (a)
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Abuelo (a)
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Hermano (a)
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Empleado (a) doméstico (a)
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Otro pariente
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Yerno o nuera
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: No pariente
+        ## Cuál es la relación o parentesco con la jefa o el jefe del hogar: Miembro de un hogar colectivo
+        ```
+        
+          - Sexo y población
+        total:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Sexo|Población total', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Sexo: Hombres
+        ## Sexo: Mujeres
+        ## Población total
+        ```
+        
+          - Edad en grupos (quinquenales 0, 1-4, …. 85 y más; decenales;
+            grandes
+        grupos):
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('^Edad en ', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 0
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 1 -   4
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 5 -  9
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 10 - 14
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 15 - 19
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 20 - 24
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 25 - 29
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 30 - 34
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 35 - 39
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 40 - 44
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 45 - 49
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 50 - 54
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 55 - 59
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 60 - 64
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 65 - 69
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 70 - 74
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 75 - 79
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 80 - 84
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 85 - 89
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 90 - 94
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 95 - 99
+        ## Edad en grupos quinquenales 0, 1-4, .... 85 y más: 100 y más
+        ## Edad en grupos decenales: 0 -  9
+        ## Edad en grupos decenales: 10 - 19
+        ## Edad en grupos decenales: 20 - 29
+        ## Edad en grupos decenales: 30 - 39
+        ## Edad en grupos decenales: 40 - 49
+        ## Edad en grupos decenales: 50 - 59
+        ## Edad en grupos decenales: 60 - 69
+        ## Edad en grupos decenales: 70 - 79
+        ## Edad en grupos decenales: 80 - 89
+        ## Edad en grupos decenales: 90 - 99
+        ## Edad en grupos decenales: 100 y más
+        ## Edad en grandes grupos: 0 - 14
+        ## Edad en grandes grupos: 15 - 64
+        ## Edad en grandes grupos: 65 y más
+        ```
+        
+          - Discapacidades:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('^Dificultad', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Dificultad para Ver, aunque use anteojos o lentes: Si
+        ## Dificultad para Ver, aunque use anteojos o lentes: No
+        ## Dificultad para Ver, aunque use anteojos o lentes: No declarado
+        ## Dificultad para Oir, aunque use audifonos: Si
+        ## Dificultad para Oir, aunque use audifonos: No
+        ## Dificultad para Oir, aunque use audifonos: No declarado
+        ## Dificultad para Caminar o subir escalones: Si
+        ## Dificultad para Caminar o subir escalones: No
+        ## Dificultad para Caminar o subir escalones: No declarado
+        ## Dificultad para mover uno o los dos brazos: Si
+        ## Dificultad para mover uno o los dos brazos: No
+        ## Dificultad para mover uno o los dos brazos: No declarado
+        ## Dificultad para mover uno o las dos piernas: Si
+        ## Dificultad para mover uno o las dos piernas: No
+        ## Dificultad para mover uno o las dos piernas: No declarado
+        ## Dificultad para recordar o concentrarse: Si
+        ## Dificultad para recordar o concentrarse: No
+        ## Dificultad para recordar o concentrarse: No declarado
+        ## Dificultad para agarrar objetos y/o abrir recipientes con las manos: Si
+        ## Dificultad para agarrar objetos y/o abrir recipientes con las manos: No
+        ## Dificultad para agarrar objetos y/o abrir recipientes con las manos: No declarado
+        ## Dificultad para hablar: Si
+        ## Dificultad para hablar: No
+        ## Dificultad para hablar: No declarado
+        ## Dificultad, es Mudo: Si
+        ## Dificultad, es Mudo: No
+        ## Dificultad, es Mudo: No declarado
+        ## Dificultad, tiene problemas mentales: Si
+        ## Dificultad, tiene problemas mentales: No
+        ## Dificultad, tiene problemas mentales: No declarado
+        ## Dificultad, le falta una o las dos piernas: Si
+        ## Dificultad, le falta una o las dos piernas: No
+        ## Dificultad, le falta una o las dos piernas: No declarado
+        ## Dificultad, le falta uno o los dos brazos: Si
+        ## Dificultad, le falta uno o los dos brazos: No
+        ## Dificultad, le falta uno o los dos brazos: No declarado
+        ```
+        
+          - Educación,
+        instrucción:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('^Sabe|^Asiste|^Nivel educativo', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Sabe leer y escribir: Sabe leer y escribir
+        ## Sabe leer y escribir: No sabe leer ni escribir
+        ## Asiste o asistió a la escuela: Asiste
+        ## Asiste o asistió a la escuela: No asiste, pero asistió
+        ## Asiste o asistió a la escuela: Nunca asistió
+        ## Nivel educativo más alto al que asistió: Preprimaria
+        ## Nivel educativo más alto al que asistió: Primaria o básica
+        ## Nivel educativo más alto al que asistió: Secundaria o media
+        ## Nivel educativo más alto al que asistió: Universitaria o superior
+        ```
+        
+          - Categoría
+        Ocupacional:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Categoría Ocupacional', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Categoría Ocupacional: Ocupado
+        ## Categoría Ocupacional: Cesante
+        ## Categoría Ocupacional: Busca trab. 1era Vez
+        ## Categoría Ocupacional: Desalentado
+        ## Categoría Ocupacional: Quehaceres domésticos
+        ## Categoría Ocupacional: Estudiante
+        ## Categoría Ocupacional: Rentista
+        ## Categoría Ocupacional: Jubilado/Pensionado
+        ## Categoría Ocupacional: Discapacitado
+        ## Categoría Ocupacional: Anciano
+        ## Categoría Ocupacional: Otra actividad
+        ## Categoría Ocupacional: Ninguna actividad
+        ## Categoría Ocupacional: No declarada
+        ```
+        
+          - Condición Actividad
+        Económica:
+        
+        <!-- end list -->
+        
+        ``` r
+        cat(grep('Condición Actividad Económica: ', colnames(vivpersgeom_sf), value=T), sep = '\n')
+        ## Condición Actividad Económica: Empleado(a) a sueldo o salario
+        ## Condición Actividad Económica: Empleador(a) o patrón
+        ## Condición Actividad Económica: Trabajador(a) familiar o no familiar sin paga o ganancia
+        ## Condición Actividad Económica: Trabajador(a) por cuenta propia
+        ## Condición Actividad Económica: Otra
+        ## Condición Actividad Económica: No declarada
+        ```
     
-      - Geomorfología:
+      - Geomorfometría:
+    
+    <!-- end list -->
+    
+    ``` r
+    # aspect
+    # aspect_cosine
+    # aspect_sine
+    # convergence
+    # cti
+    # dev_magnitude
+    # dev_scale
+    # dx
+    # dxx
+    # dxy
+    # dy
+    # dyy
+    # eastness
+    # elev_stdev
+    # geom
+    # northness
+    # pcurv
+    # rough_magnitude
+    # rough_scale
+    # roughness
+    # salidas
+    # slope
+    # spi
+    # tcurv
+    # tpi
+    # tri
+    # vrm
+    ```
+    
+      - Para una descripción de cada variable, consultar el *preprint*
+        [“Data Descriptor: Geomorpho90m - Global high-resolution
+        geomorphometry layers: empirical evaluation and accuracy
+        assessment”](https://peerj.com/preprints/27595.pdf)
+    
+      - Todas las variables son cuantitativas, excepto `geom`, que se
+        refiere a los “geomórfonos” (*geomorphons*). Por medio de
+        estadística zonal, para cada municipio se obtuvieron los
+        estadísticos descriptivos de las variables cuantitativas (valor
+        mínimo, primer cuartil (25%), media, mediana, tercer cuartil
+        (75%), valor máximo y desviación estándar). De los geomórfonos,
+        al ser cualitativa, se obtuvieron los porcentajes ocupados por
+        cada geomórfono en el municipio.
 
-  - `data/onamet_prec_anual_sf.*`.
+  - `data/onamet_prec_anual_sf.*`. Precipitación anual, desde 1979 hasta
+    2014, de las siguientes
+estaciones:
+
+<!-- end list -->
+
+``` r
+onamet_prec_anual_sf <- read.csv('data/onamet_prec_anual_sf.csv', check.names = F, stringsAsFactors = F)
+cat(onamet_prec_anual_sf$Estación, sep = '\n')
+## Barahona
+## Bayaguana
+## Cabrera
+## Constanza
+## Gaspar Hernández
+## Hondo Valle
+## Jimaní
+## La Unión
+## La Vega
+## Las Américas
+## Moca
+## Monte Cristi
+## Padre Las Casas
+## Polo
+## Punta Cana
+## Rancho Arriba
+## Río San Juan
+## Sabana de la Mar
+## Salcedo
+## Samaná
+## San Cristóbal
+## Santiago
+## Santiago Rodríguez
+## Santo Domingo
+## Villa Vázquez
+```

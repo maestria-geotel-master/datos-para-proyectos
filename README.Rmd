@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.csv`, `.gpkg` y `.RDS` de R). Cada conjunto es descrito a continuación:
 
-* `data/vivpersgeom_sf.*`. Un total de 850 variables, sobre viviendas, personas y geomorfología a nivel municipal. La mayoría de las variables se encuentran bajo columnas con encabezados explícitos. Agrupadas, las variables son los siguientes:
+* `data/vivpersgeom_sf.*`. Un total de 850 variables, sobre viviendas, personas y geomorfometría a nivel municipal. La mayoría de las variables se encuentran bajo columnas con encabezados explícitos. Agrupadas, las variables son los siguientes:
 
     ```{r}
     vivpersgeom_sf <- read.csv('data/vivpersgeom_sf.csv', check.names = F)
@@ -124,17 +124,119 @@ La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.
       cat(grep('Centros de refugio de la defensa civ', colnames(vivpersgeom_sf), value=T), sep = '\n')
       ```      
       
+      * Distancia kms de viviendas del segmento hasta: Hospital más cercano:
       
+      ```{r}
+      cat(grep('Distancia kms.*Hospital más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
       
+      * Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano:
       
+      ```{r}
+      cat(grep('Distancia kms.*sario más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
       
+      * Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano:
       
-      
-      
+      ```{r}
+      cat(grep('Distancia kms.*dario más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
 
+      * Distancia kms de viviendas del segmento hasta: Farmacia más cercana:
+      
+      ```{r}
+      cat(grep('Distancia kms.*Farmacia más cercana:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
 
+      * Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano:
+      
+      ```{r}
+      cat(grep('Distancia kms.*mercado más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
    * Personas: 
    
-   * Geomorfología: 
+      * Cuál es la relación o parentesco con la jefa o el jefe del hogar:
+      
+      ```{r}
+      cat(grep('Cuál es la relación o parentesco', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
 
-* `data/onamet_prec_anual_sf.*`. 
+      * Sexo y población total:
+      
+      ```{r}
+      cat(grep('Sexo|Población total', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
+
+      * Edad en grupos (quinquenales 0, 1-4, .... 85 y más; decenales; grandes grupos):
+      
+      ```{r}
+      cat(grep('^Edad en ', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
+
+      * Discapacidades:
+      
+      ```{r}
+      cat(grep('^Dificultad', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
+
+      * Educación, instrucción:
+      
+      ```{r}
+      cat(grep('^Sabe|^Asiste|^Nivel educativo', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
+   
+      * Categoría Ocupacional:
+      
+      ```{r}
+      cat(grep('Categoría Ocupacional', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```      
+
+      * Condición Actividad Económica:
+      
+      ```{r}
+      cat(grep('Condición Actividad Económica: ', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      ```
+      
+   * Geomorfometría:
+   
+    ```{r}
+    # aspect
+    # aspect_cosine
+    # aspect_sine
+    # convergence
+    # cti
+    # dev_magnitude
+    # dev_scale
+    # dx
+    # dxx
+    # dxy
+    # dy
+    # dyy
+    # eastness
+    # elev_stdev
+    # geom
+    # northness
+    # pcurv
+    # rough_magnitude
+    # rough_scale
+    # roughness
+    # salidas
+    # slope
+    # spi
+    # tcurv
+    # tpi
+    # tri
+    # vrm
+    ```
+    
+    * Para una descripción de cada variable, consultar el *preprint* ["Data Descriptor: Geomorpho90m - Global high-resolution geomorphometry layers: empirical evaluation and accuracy assessment"](https://peerj.com/preprints/27595.pdf)
+    
+    * Todas las variables son cuantitativas, excepto `geom`, que se refiere a los "geomórfonos" (*geomorphons*). Por medio de estadística zonal, para cada municipio se obtuvieron los estadísticos descriptivos de las variables cuantitativas (valor mínimo, primer cuartil (25%), media, mediana, tercer cuartil (75%), valor máximo y desviación estándar). De los geomórfonos, al ser cualitativa, se obtuvieron los porcentajes ocupados por cada geomórfono en el municipio. 
+
+* `data/onamet_prec_anual_sf.*`. Precipitación anual, desde 1979 hasta 2014, de las siguientes estaciones:
+
+```{r}
+onamet_prec_anual_sf <- read.csv('data/onamet_prec_anual_sf.csv', check.names = F, stringsAsFactors = F)
+cat(onamet_prec_anual_sf$Estación, sep = '\n')
+```

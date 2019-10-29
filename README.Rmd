@@ -1,0 +1,58 @@
+---
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  collapse=TRUE
+  # out.width='100%',
+  # fig.path = "img/",
+)
+```
+
+<!-- Este .md fue generado a partir del .Rmd homónimo. Edítese el .Rmd -->
+
+# Datos para proyectos
+
+La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.csv`, `.gpkg` y `.RDS` de R). Cada conjunto es descrito a continuación:
+
+* `data/vivpersgeom_sf.*`. Un total de 850 variables, sobre viviendas, personas y geomorfología a nivel municipal. La mayoría de las variables se encuentran bajo columnas con encabezados explícitos. Agrupadas, las variables son los siguientes:
+
+    ```{r}
+    vivpersgeom_sf <- read.csv('data/vivpersgeom_sf.csv', check.names = F)
+    ```
+
+
+   * Códigos identificadores (6 columnas):
+   
+    ```{r}
+    cat(colnames(vivpersgeom_sf)[1:6], sep = '\n')
+    ```
+   
+   * Viviendas:
+   
+      * Características generales de las viviendas:
+      
+          * Tipo de vivienda:
+   
+          ```{r}
+          cat(grep('Tipo de vivienda:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+          ```
+
+          *  Condición de ocupación:
+          
+          ```{r}
+          cat(grep('Condición de ocupación:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+          ```
+          
+          
+          
+          
+   * Personas: 
+   
+   * Geomorfología: 
+
+* `data/onamet_prec_anual_sf.*`. 

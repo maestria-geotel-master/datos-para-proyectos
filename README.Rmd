@@ -23,13 +23,14 @@ La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.
 
     ```{r}
     vivpersgeom_sf <- read.csv('data/vivpersgeom_sf.csv', check.names = F)
+    columnas <- colnames(vivpersgeom_sf)
     ```
 
 
    * Códigos identificadores (6 columnas):
    
     ```{r}
-    cat(colnames(vivpersgeom_sf)[1:6], sep = '\n')
+    cat(columnas[1:5], sep = '\n')
     ```
    
    * Viviendas:
@@ -37,121 +38,121 @@ La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.
       * Tipo de vivienda:
   
       ```{r}
-      cat(grep('Tipo de vivienda:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Tipo de vivienda:', columnas, value=T), sep = '\n')
       ```
   
       * Condición de ocupación:
       
       ```{r}
-      cat(grep('Condición de ocupación:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Condición de ocupación:', columnas, value=T), sep = '\n')
       ```
       
       * Material Construcción:
       
       ```{r}
-      cat(grep('Material Construcción', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Material Construcción', columnas, value=T), sep = '\n')
       ```
       
       * Tiene la vivienda cuarto de cocina:
       
       ```{r}
-      cat(grep('Tiene la vivienda cuarto de coc', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Tiene la vivienda cuarto de coc', columnas, value=T), sep = '\n')
       ```
       
       * Cantidad Cuartos tiene la vivienda:
       
       ```{r}
-      cat(grep('Cantidad Cuartos tiene la viv:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Cantidad Cuartos tiene la viv', columnas, value=T), sep = '\n')
       ```
       
       * Cantidad Hogares en la vivienda:
       
       ```{r}
-      cat(grep('Cantidad Hogares en la vivienda:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Cantidad Hogares en la vivienda:', columnas, value=T), sep = '\n')
       ```
       
       * Acceso a las viviendas del segmento:
       
       ```{r}
-      cat(grep('Acceso a las viviendas del seg', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Acceso a las viviendas del seg', columnas, value=T), sep = '\n')
       ```
       
       * Estado de la mayoría de vías de acceso a viviendas del segmento:
       
       ```{r}
-      cat(grep('Estado de la mayoría de vías', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Estado de la mayoría de vías', columnas, value=T), sep = '\n')
       ```
   
-      * Estado de la mayoría de vías de acceso a viviendas del segmento:
+      * Principal medio de transporte utilizado por hogares del segmento:
       
       ```{r}
-      cat(grep('Principal medio de transporte', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Principal medio de transporte', columnas, value=T), sep = '\n')
       ```
   
       * Medio de transporte llega al segmento:
       
       ```{r}
-      cat(grep('Medio de transporte llega al seg', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Medio de transporte llega al seg', columnas, value=T), sep = '\n')
       ```
 
       * Hogares del segmento expuestos a:
       
       ```{r}
-      cat(grep('Hogares del segmento expuestos a:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Hogares del segmento expuestos a:', columnas, value=T), sep = '\n')
       ```
       
       * Contaminación:
       
       ```{r}
-      cat(grep('Contaminación:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Contaminación:', columnas, value=T), sep = '\n')
       ```
       
       * Ubicación viviendas del segmento:
       
       ```{r}
-      cat(grep('Ubicación viviendas del segmento:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Ubicación viviendas del segmento:', columnas, value=T), sep = '\n')
       ```
       
       * Desastres que afectaron a hogares del segmento:
       
       ```{r}
-      cat(grep('Desastres que afectaron a hogares', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Desastres que afectaron a hogares', columnas, value=T), sep = '\n')
       ```      
       
       * Centros de refugio de la defensa civil en este segmento:
       
       ```{r}
-      cat(grep('Centros de refugio de la defensa civ', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Centros de refugio de la defensa civ', columnas, value=T), sep = '\n')
       ```      
       
       * Distancia kms de viviendas del segmento hasta: Hospital más cercano:
       
       ```{r}
-      cat(grep('Distancia kms.*Hospital más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Distancia kms.*Hospital más cercano:', columnas, value=T), sep = '\n')
       ```      
       
       * Distancia kms de viviendas del segmento hasta: Clinica o dispensario más cercano:
       
       ```{r}
-      cat(grep('Distancia kms.*sario más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Distancia kms.*sario más cercano:', columnas, value=T), sep = '\n')
       ```      
       
       * Distancia kms de viviendas del segmento hasta: Liceo secundario más cercano:
       
       ```{r}
-      cat(grep('Distancia kms.*dario más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Distancia kms.*dario más cercano:', columnas, value=T), sep = '\n')
       ```      
 
       * Distancia kms de viviendas del segmento hasta: Farmacia más cercana:
       
       ```{r}
-      cat(grep('Distancia kms.*Farmacia más cercana:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Distancia kms.*Farmacia más cercana:', columnas, value=T), sep = '\n')
       ```      
 
       * Distancia kms de viviendas del segmento hasta: Colmado o supermercado más cercano:
       
       ```{r}
-      cat(grep('Distancia kms.*mercado más cercano:', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Distancia kms.*mercado más cercano:', columnas, value=T), sep = '\n')
       ```
       
    * Personas: 
@@ -159,75 +160,54 @@ La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.
       * Cuál es la relación o parentesco con la jefa o el jefe del hogar:
       
       ```{r}
-      cat(grep('Cuál es la relación o parentesco', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Cuál es la relación o parentesco', columnas, value=T), sep = '\n')
       ```      
 
       * Sexo y población total:
       
       ```{r}
-      cat(grep('Sexo|Población total', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Sexo|Población total', columnas, value=T), sep = '\n')
       ```      
 
       * Edad en grupos (quinquenales 0, 1-4, .... 85 y más; decenales; grandes grupos):
       
       ```{r}
-      cat(grep('^Edad en ', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('^Edad en ', columnas, value=T), sep = '\n')
       ```      
 
       * Discapacidades:
       
       ```{r}
-      cat(grep('^Dificultad', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('^Dificultad', columnas, value=T), sep = '\n')
       ```      
 
       * Educación, instrucción:
       
       ```{r}
-      cat(grep('^Sabe|^Asiste|^Nivel educativo', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('^Sabe|^Asiste|^Nivel educativo', columnas, value=T), sep = '\n')
       ```      
    
       * Categoría Ocupacional:
       
       ```{r}
-      cat(grep('Categoría Ocupacional', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Categoría Ocupacional', columnas, value=T), sep = '\n')
       ```      
 
       * Condición Actividad Económica:
       
       ```{r}
-      cat(grep('Condición Actividad Económica: ', colnames(vivpersgeom_sf), value=T), sep = '\n')
+      cat(grep('Condición Actividad Económica: ', columnas, value=T), sep = '\n')
       ```
       
    * Geomorfometría:
    
     ```{r}
-    # aspect
-    # aspect_cosine
-    # aspect_sine
-    # convergence
-    # cti
-    # dev_magnitude
-    # dev_scale
-    # dx
-    # dxx
-    # dxy
-    # dy
-    # dyy
-    # eastness
-    # elev_stdev
-    # geom
-    # northness
-    # pcurv
-    # rough_magnitude
-    # rough_scale
-    # roughness
-    # salidas
-    # slope
-    # spi
-    # tcurv
-    # tpi
-    # tri
-    # vrm
+    cat(
+      unique(
+      gsub('_[0-9]*_pct.*$|_min.*$|_max.*$|_media.*$|_mediana.*$|_cuartil.*$|_desv.*$', '',
+           columnas[min(grep('^aspect', columnas)):max(grep('^vrm', columnas))])),
+      sep = '\n'
+    )
     ```
     
     * Para una descripción de cada variable, consultar el *preprint* ["Data Descriptor: Geomorpho90m - Global high-resolution geomorphometry layers: empirical evaluation and accuracy assessment"](https://peerj.com/preprints/27595.pdf)

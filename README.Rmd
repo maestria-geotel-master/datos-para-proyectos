@@ -212,7 +212,7 @@ La carpeta `data` contiene dos conjuntos de datos en tres formatos distintos (`.
     
     * Para una descripción de cada variable, consultar el *preprint* ["Data Descriptor: Geomorpho90m - Global high-resolution geomorphometry layers: empirical evaluation and accuracy assessment"](https://peerj.com/preprints/27595.pdf)
     
-    * Todas las variables son cuantitativas, excepto `geom`, que se refiere a los "geomórfonos" (*geomorphons*). Por medio de estadística zonal, para cada municipio se obtuvieron los estadísticos descriptivos de las variables cuantitativas (valor mínimo, primer cuartil (25%), media, mediana, tercer cuartil (75%), valor máximo y desviación estándar). De los geomórfonos, al ser cualitativa, se obtuvieron los porcentajes ocupados por cada geomórfono en el municipio. 
+    * Todas las variables son cuantitativas, excepto `geomorfonos` (denominados `geom` en la cita original), que se refiere a los "geomórfonos" (*geomorphons*). Por medio de estadística zonal, para cada municipio se obtuvieron los estadísticos descriptivos de las variables cuantitativas (valor mínimo, primer cuartil (25%), media, mediana, tercer cuartil (75%), valor máximo y desviación estándar). De los geomórfonos, al ser cualitativa, se obtuvieron los porcentajes ocupados por cada geomórfono en el municipio; de ahí que cada columna siga la convención "geomorfonos_X_pct", donde "X" corresponde a cada uno de los 10 geomórfonos, según la siguiente clave: "1=llanura", "2=pico", "3=interfluvio", "4=hombrera", "5=espolón/gajo", "6=vertiente", "7=vaguada", "8=piedemonte", "9=valle", "10=sima".
 
 * `data/onamet_prec_anual_sf.*`. Precipitación anual, desde 1979 hasta 2014, de las siguientes estaciones:
 
